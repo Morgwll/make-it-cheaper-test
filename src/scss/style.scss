@@ -5,184 +5,44 @@ button {
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(#00bef0, #4fd2dc) no-repeat;
   height: 100vh;
   font-family: helvetica;
   margin: 0;
   padding: 0;
 }
-.emailModal {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px grey;
-  max-width: 650px;
-  overflow: hidden;
+.faq {
+  max-width: 960px;
   width: 100%;
-  position: absolute;
-  top: calc(50% - 350px);
-  left: calc(50% - 325px);
-  &__content {
-    padding: 15px;
-  }
-  &__field {
-    line-height: 2rem;
-  }
-  &__field,
-  &__inputField {
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    margin: 5px 0;
-    padding: 5px;
-    width: 100%;
-  }
-  &__inputField {
-    min-height: 185px;
-    overflow: auto;
-  }
+  margin: 0 auto;
 }
-.emailSent {
-  display: hidden;
-  hr {
-    width: 80%;
-    margin: 0 auto;
+
+.faqList {
+  list-style-type: none;
+  padding-left: 0;
+  &__element {
+    margin: 10px 0;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
   }
-  &__confirmationTick {
-    margin-bottom: 40px;
-    text-align: center;
-    font-size: 1.4rem;
-    color: #a1a2a5;
-    .fa-check-circle {
-      color: #4bd59c;
-      font-size: 6rem;
-      text-align: center;
-      margin: 12% auto 40px;
-      width: 100%;
+  &__elementContent {
+    &--question {
+      background-color: cyan;
+      padding: 10px;
+      border-bottom: 1px solid #a0a0a0;
+      color: blue;
     }
-  }
-  &__contentBox {
-    width: 80%;
-    margin: 0 auto;
-    &--title {
-      margin: 40px 0 15px;
-      font-size: 1.3rem;
-      font-weight: 700;
+    &--answer {
+      overflow: hidden;
+      height: 0;
     }
-    &--recipient {
-      font-size: 0.9rem;
-      span {
-        color: #00bef0;
-      }
-    }
-    &--message {
-      padding: 30px 0;
-    }
-  }
-  i {
-    margin: 0 auto;
-  }
-}
-.emailHead {
-  background-color: #094358;
-  color: #fff;
-  font-size: 1.5rem;
-  height: 80px;
-  line-height: 80px;
-  padding: 0 15px;
-}
-.sendButton {
-  border: none;
-  border-radius: 18px;
-  font-weight: 700;
-  height: 35px;
-  width: 100px;
-  color: #a1a2a5;
-  float: right;
-}
-.realAttachButton {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-.attachButton {
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid #e0e0e0;
-  color: #a1a2a5;
-  cursor: pointer;
-  font-size: 1.5rem;
-  height: 35px;
-  width: 35px;
-}
-.attachmentList {
-  padding: 0;
-  display: inline-flex;
-  li {
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 5px;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    img {
-      margin-top: -70%;
-      margin-left: -100%;
-      width: 300%;
-    }
-  }
-  &__delete {
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    opacity: 0;
-    &:hover {
-      opacity: 0.8;
-    }
-    &--binButton {
-      border-radius: 50%;
-      height: 50px;
-      width: 50px;
-      margin: 25px auto;
-      background-color: #a1a2a5;
-      i {
-        font-size: 1.8rem;
-        margin: 12px 13px;
-        color: #fff;
-      }
+    &--tick {
+      float: right;
+      padding: 0 10px;
+      cursor: pointer;
     }
   }
 }
-.highlighted {
-  border: 1px solid red;
-  border-radius: 4px;
-}
-.inputFile {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  input[type="file"] {
-    font-size: 1px;
-    height: 35px;
-    position: absolute;
-    left: 0;
-    cursor: pointer;
-    top: 0;
-    opacity: 0;
-  }
-}
-.activeSend {
-  background-color: #04b7e5;
-  cursor: pointer;
-  color: #fff;
-}
-@media only screen and (max-width: 768px) {
-  .emailModal {
-    width: calc(100% - 20px);
-  }
+.show {
+  padding: 10px;
+  height: auto;
 }

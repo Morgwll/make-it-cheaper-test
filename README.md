@@ -1,7 +1,10 @@
-# vue-email-sample
+# Wunderman Thompson technical test
 
-A sample of an email interface. A test for Ebory.
+In order to run the application you must:
 
-Challenges:
+- Navigate to the app folder through the console and run "npm install" so all the packages necessary for the dev environment for this application will install.
+- Run "npm run dev" for a live development environment or "npm run build" to create a "dist" folder where the final html, css and javascript file will be compiled.
 
-- When attaching files to the email the path changes, breaking the preview. This is a measure browsers have put in place by default. I have added two files to the array that would contain the list items, so we get to see the preview functionality and the delete attachment functionality too.
+Name: Joseph Ortega
+Job Title: Senior Front End Developer
+email: joseph.ortega.design@gmail.com

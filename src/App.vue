@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <email-form></email-form>
+    <faq></faq>
   </div>
 </template>
 
 <script>
-import emailForm from "./components/email.vue";
+import faq from "./components/faq.vue";
 
 export default {
   name: "app",
   components: {
-    emailForm
+    faq
   }
 };
 </script>
