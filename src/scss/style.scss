@@ -4,45 +4,81 @@ textarea,
 button {
   box-sizing: border-box;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 body {
   height: 100vh;
-  font-family: helvetica;
+  font-family: Cabin, Helvetica;
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(#4fc5cd, #bbf9f1);
 }
-.faq {
-  max-width: 960px;
+input {
+  padding: 5px;
+  margin-bottom: 0;
+}
+.narrow-center {
   width: 100%;
+  max-width: 960px;
   margin: 0 auto;
 }
-
-.faqList {
-  list-style-type: none;
-  padding-left: 0;
-  &__element {
-    margin: 10px 0;
-    border: 1px solid #a0a0a0;
-    border-radius: 5px;
+.mainWrapper {
+  @extend .narrow-center;
+}
+.bulbImage {
+  margin: 0 0 1px 60px;
+}
+.formHeader {
+  margin-top: 50px;
+  align-items: flex-end;
+  h2 {
+    color: #fff;
+    margin-left: 50px;
+    font-size: 4rem;
+    margin: 15px 0 15px 50px;
+    line-height: 4rem;
   }
-  &__elementContent {
-    &--question {
-      background-color: cyan;
-      padding: 10px;
-      border-bottom: 1px solid #a0a0a0;
-      color: blue;
-    }
-    &--answer {
-      overflow: hidden;
-      height: 0;
-    }
-    &--tick {
-      float: right;
-      padding: 0 10px;
-      cursor: pointer;
-    }
-  }
+}
+.form {
+  @extend .narrow-center;
+  background-color: #eafdfc;
+  padding: 20px;
+  box-shadow: 0 0 2px #000;
+}
+.fields {
+  width: 30%;
+}
+.fieldBlurb {
+  width: 70%;
+  padding: 20px;
+}
+.formButton {
+  height: 46px;
+  border-radius: 23px;
+  width: 150px;
+  margin: 10px;
+  color: #fff;
+  background-color: #18d7c5;
+  box-shadow: 3px 3px 5px #c1c1c1;
+  border: 0px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.errorField {
+  border: 1px solid red;
 }
 .show {
   padding: 10px;
   height: auto;
+}
+.flexible {
+  display: flex;
 }

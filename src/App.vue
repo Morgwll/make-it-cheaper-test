@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <faq></faq>
+    <callball-form></callball-form>
   </div>
 </template>
 
 <script>
-import faq from "./components/faq.vue";
+import callballForm from "./components/callback-form.vue";
 
 export default {
   name: "app",
   components: {
-    faq
+    callballForm
   }
 };
 </script>
