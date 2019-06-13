@@ -110,7 +110,6 @@ export default {
       phoneNumber: "",
       email: ""
     };
-    //const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/;
     let errorCount = 0;
     let errors = {
       name: false,
@@ -126,7 +125,6 @@ export default {
       formFields,
       content,
       errors
-      //reg
     };
   },
   methods: {
@@ -173,10 +171,10 @@ export default {
     sendInfo() {
       this.checkForms();
       if (this.errorCount === 0) {
-        //this.content = "sent";
         axios
           .post(
-            "http://mic-leads.dev-test.makeiteasy.com/docs/v1/api.yml/f24028f76c6cc79cf4738056ca742d77"
+            "http://mic-leads.dev-test.makeiteasy.com/docs/v1/api.yml/f24028f76c6cc79cf4738056ca742d77",
+            this.formFields
           )
           .then(response => (this.formFields = response.data))
           .then(() => (this.content = "sent"))
